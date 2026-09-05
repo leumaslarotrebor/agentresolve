@@ -1,0 +1,17 @@
+[
+  {"customer_id": "CUST-1001", "name": "Aoife Byrne", "email": "aoife.byrne@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "gold"},
+  {"customer_id": "CUST-1002", "name": "Liam O'Connor", "email": "liam.oconnor@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "standard"},
+  {"customer_id": "CUST-1003", "name": "Sophie Turner", "email": "sophie.turner@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "silver"},
+  {"customer_id": "CUST-1004", "name": "James Whitfield", "email": "james.whitfield@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "standard"},
+  {"customer_id": "CUST-1005", "name": "Emma Walsh", "email": "emma.walsh@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "gold"},
+  {"customer_id": "CUST-1006", "name": "Noah Fitzgerald", "email": "noah.fitzgerald@example.ie", "account_status": "suspended", "country": "Ireland", "customer_tier": "standard"},
+  {"customer_id": "CUST-1007", "name": "Chloe Bennett", "email": "chloe.bennett@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "silver"},
+  {"customer_id": "CUST-1008", "name": "Ryan Murphy", "email": "ryan.murphy@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "standard"},
+  {"customer_id": "CUST-1009", "name": "Isabella Clarke", "email": "isabella.clarke@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "gold"},
+  {"customer_id": "CUST-1010", "name": "Jack Kennedy", "email": "jack.kennedy@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "standard"},
+  {"customer_id": "CUST-1011", "name": "Grace Sullivan", "email": "grace.sullivan@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "silver"},
+  {"customer_id": "CUST-1012", "name": "Oliver Hughes", "email": "oliver.hughes@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "standard"},
+  {"customer_id": "CUST-1013", "name": "Amelia Ryan", "email": "amelia.ryan@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "gold"},
+  {"customer_id": "CUST-1014", "name": "Harry Doyle", "email": "harry.doyle@example.ie", "account_status": "active", "country": "Ireland", "customer_tier": "standard"},
+  {"customer_id": "CUST-1015", "name": "Freya Campbell", "email": "freya.campbell@example.co.uk", "account_status": "active", "country": "United Kingdom", "customer_tier": "silver"}
+]

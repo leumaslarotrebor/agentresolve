@@ -1,0 +1,38 @@
+[
+  {
+    "id": "POLICY-DAMAGED",
+    "topic": "damaged_product",
+    "title": "Damaged Product Policy",
+    "content": "If a customer reports that a product arrived damaged, the customer is entitled to a free replacement, provided the report is made within 30 days of the delivery date and the product is marked replacement_eligible. Damage must be reported before any refund is offered as an alternative. If replacement inventory is unavailable, escalate to a support ticket and offer the customer a refund or a wait-for-restock option instead of falsely promising a replacement."
+  },
+  {
+    "id": "POLICY-REFUND",
+    "topic": "refund",
+    "title": "Refund Policy",
+    "content": "Refunds are permitted within 30 days of delivery for damaged, defective, or materially not-as-described items. Refunds under EUR 100 may be processed autonomously by the support agent. Refunds of EUR 100 or more require explicit human approval before the refund tool may be executed. Refund requests for orders delivered more than 30 days ago are not eligible unless a manager grants a manual exception."
+  },
+  {
+    "id": "POLICY-REPLACEMENT",
+    "topic": "replacement",
+    "title": "Replacement Policy",
+    "content": "A replacement order may be created automatically when all of the following are true: the order exists and was delivered within the last 30 days, the product is marked replacement_eligible, and there is at least 1 unit of matching inventory available. If any condition fails, do not create a replacement. Instead explain the reason and offer the best available alternative (refund, waitlist, or escalation)."
+  },
+  {
+    "id": "POLICY-WARRANTY",
+    "topic": "warranty",
+    "title": "Warranty Policy",
+    "content": "All hardware products carry a 12-month manufacturer warranty covering functional defects not caused by accidental damage. Warranty claims outside the 30-day replacement window should be routed to a support ticket for manufacturer-warranty handling rather than an immediate replacement or refund."
+  },
+  {
+    "id": "POLICY-ESCALATION",
+    "topic": "escalation",
+    "title": "Escalation Policy",
+    "content": "A request should be escalated to a human support ticket when: required inventory is unavailable, the customer's account is suspended, the request falls outside standard policy windows, the refund amount meets or exceeds the human-approval threshold, or the agent cannot confidently determine an appropriate resolution. Escalations must include a clear reason and a summary of what the agent already checked."
+  },
+  {
+    "id": "POLICY-DELIVERY",
+    "topic": "delivery",
+    "title": "Delivery Policy",
+    "content": "Standard delivery is 3-5 business days. Replacement orders are prioritized for expedited shipping and typically arrive within 2 business days of creation. If a customer has a hard deadline, this should be communicated in the customer-facing response but the agent must not guarantee a specific delivery date it cannot confirm through a tool."
+  }
+]

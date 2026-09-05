@@ -1,0 +1,12 @@
+[
+  {"product_id": "PROD-100", "name": "Aster 14 Laptop", "category": "laptop", "price": 899.00, "inventory": 6, "replacement_eligible": true},
+  {"product_id": "PROD-101", "name": "Aster 14 Laptop Pro", "category": "laptop", "price": 1349.00, "inventory": 2, "replacement_eligible": true},
+  {"product_id": "PROD-102", "name": "Vela 27 Monitor", "category": "monitor", "price": 329.00, "inventory": 0, "replacement_eligible": true},
+  {"product_id": "PROD-103", "name": "Vela 24 Monitor", "category": "monitor", "price": 219.00, "inventory": 5, "replacement_eligible": true},
+  {"product_id": "PROD-104", "name": "Quantum Mechanical Keyboard", "category": "accessory", "price": 89.00, "inventory": 40, "replacement_eligible": true},
+  {"product_id": "PROD-105", "name": "Nimbus Wireless Mouse", "category": "accessory", "price": 39.00, "inventory": 55, "replacement_eligible": true},
+  {"product_id": "PROD-106", "name": "Orbit Docking Station", "category": "accessory", "price": 149.00, "inventory": 12, "replacement_eligible": true},
+  {"product_id": "PROD-107", "name": "Halo Noise-Cancelling Headset", "category": "audio", "price": 179.00, "inventory": 18, "replacement_eligible": true},
+  {"product_id": "PROD-108", "name": "Drift Portable SSD 1TB", "category": "storage", "price": 109.00, "inventory": 30, "replacement_eligible": false},
+  {"product_id": "PROD-109", "name": "Sable Backpack", "category": "accessory", "price": 59.00, "inventory": 25, "replacement_eligible": false}
+]
