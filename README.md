@@ -1,12 +1,33 @@
 # AgentResolve
 
-An autonomous customer-support resolution agent that understands a natural-language
-request, gathers the facts it needs through tools, decides on a resolution grounded in
-company policy, and executes a real (mock) business action — pausing for human approval
-when the action is consequential enough to require it.
+**An autonomous customer-support agent that doesn't just answer — it looks things up, decides, and acts.**
+
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-38%20passing-2ea44f)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+Given a natural-language request, AgentResolve gathers the facts it needs through tools,
+decides on a resolution grounded in company policy, and executes a real (mock) business
+action — pausing for human approval when the action is consequential enough to require it.
 
 Built as a portfolio project for the **Salesforce AI Builder, Emerging Talent — UK & Ireland**
 application.
+
+### At a glance
+
+| | |
+|---|---|
+| 🧠 **Real tool calling** | 8 typed, validated tools an LLM (or deterministic fallback) chooses between at runtime — no hardcoded `if "damaged" in message` |
+| ✅ **Human-in-the-loop** | Refunds over threshold pause for explicit approve/reject before anything executes |
+| 🔁 **Idempotent & safe** | Duplicate requests never double-create a refund or replacement; failed tools are never reported as successes |
+| 🧪 **Actually tested** | 38 passing pytest tests across agent scenarios, tools, and the live API |
+| 🖥️ **Full stack** | FastAPI + Pydantic backend, React + TypeScript dashboard, Docker Compose |
+| 📖 **Honestly documented** | Clear section below on what's real vs. simulated — no inflated claims |
+
+**[Jump to: Demo scenarios](#demo-scenarios) · [Local setup](#local-setup) · [Architecture](#architecture) · [Limitations](#honest-limitations)**
 
 ---
 
@@ -27,6 +48,25 @@ inventory), reasons about what resolution policy allows, and — if authorized �
 action itself (creates a replacement, issues a refund, opens a support ticket) through typed,
 validated tools. High-risk actions (refunds over a threshold) stop and wait for a human to
 approve or reject before anything happens. Every step is recorded in an audit trail.
+
+## Table of contents
+
+- [Why Agentic AI?](#why-agentic-ai-not-a-chatbot-not-rag)
+- [Architecture](#architecture)
+- [Agent workflow](#agent-workflow)
+- [Tools](#tools)
+- [Human-in-the-loop](#human-in-the-loop)
+- [Guardrails](#guardrails)
+- [Anthropic integration vs. deterministic fallback](#anthropic-integration-vs-deterministic-fallback)
+- [Testing](#testing)
+- [Demo scenarios](#demo-scenarios)
+- [Local setup](#local-setup)
+- [Docker setup](#docker-setup)
+- [Production roadmap](#production-roadmap)
+- [Why this project demonstrates AI Builder skills](#why-this-project-demonstrates-ai-builder-skills)
+- [Honest limitations](#honest-limitations)
+
+---
 
 ## Why Agentic AI? (Not a chatbot, not RAG)
 
@@ -332,6 +372,20 @@ No Salesforce technologies are used in this implementation — see the alignment
 
 ## Local setup
 
+**Quick start** (two terminals, ~2 minutes):
+```bash
+# Terminal 1 — backend
+cd backend && python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt && python3 -m uvicorn app.main:app --reload --port 8000
+
+# Terminal 2 — frontend
+cd frontend && npm install && npm run dev
+```
+Then open **http://localhost:5173**, click a demo chip, hit **Resolve Request**.
+
+<details>
+<summary><strong>Full walkthrough</strong> (venv details, env vars, troubleshooting)</summary>
+
 ```bash
 git clone <this-repo>
 cd agentresolve
@@ -352,6 +406,12 @@ npm run dev                     # http://localhost:5173
 
 The frontend defaults to `http://localhost:8000` for the API; override with
 `VITE_API_BASE_URL` (e.g. in `frontend/.env.local`) if the backend runs elsewhere.
+
+If `pip install` tries to compile `pydantic-core` from source and hangs/fails, your
+`python3` is likely too new (e.g. 3.14) for a prebuilt wheel — install Python 3.12
+(`brew install python@3.12`) and recreate the venv with `python3.12 -m venv .venv`.
+
+</details>
 
 ### Running tests
 
