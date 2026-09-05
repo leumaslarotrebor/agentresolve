@@ -31,6 +31,19 @@ application.
 
 ---
 
+## Screenshots
+
+**Idle — demo scenarios ready to run**
+![Dashboard, idle state, with demo scenario chips](./docs/screenshots/dashboard-overview.png)
+
+**Awaiting human approval — refund above the autonomous threshold**
+![Execution timeline paused with a human approval card requesting sign-off on a €1349 refund](./docs/screenshots/dashboard-approval-required.png)
+
+**Resolved — refund approved, issued, and audited**
+![Completed execution timeline showing approval granted, refund processed, and customer notified](./docs/screenshots/dashboard-resolved.png)
+
+---
+
 ## Problem
 
 Support teams spend enormous time on requests that *are* policy-driven and repetitive —
@@ -51,6 +64,7 @@ approve or reject before anything happens. Every step is recorded in an audit tr
 
 ## Table of contents
 
+- [Screenshots](#screenshots)
 - [Why Agentic AI?](#why-agentic-ai-not-a-chatbot-not-rag)
 - [Architecture](#architecture)
 - [Agent workflow](#agent-workflow)
